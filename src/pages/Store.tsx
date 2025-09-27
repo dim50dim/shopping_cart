@@ -1,13 +1,15 @@
 import React from 'react'
 import storeItems from "../data/items.json"
 import { Col, Row } from 'react-bootstrap'
+import StoreItems from '../components/StoreItems'
 const Store = () => {
   return (
     <div>
       <h1>Store</h1>
-       <Row>
+       <Row md={2} xs={1} lg={3} className='g-3'>
           {storeItems.map(item => (
-            <Col> {JSON.stringify(item.name)} </Col>
+            <Col key={item.id}>
+               <StoreItems {...item}/> </Col>
           ))}
     
        </Row>
