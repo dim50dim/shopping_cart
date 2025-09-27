@@ -25,9 +25,14 @@ const StoreItems = ({id,name,price,imgUrl}: StoreItemsProps) => {
             </Card.Title>
             <div className='mt-auto'>
               {quantity === 0 ?(
-                 <Button className='w-100'>  Add to Cart</Button>
-              ): null}
+                 <Button className='w-100'>+ Add to Cart</Button>
+              ): <div className='d-flex align-items-center flex-column' style={{gap:".5rem"}}>
+                <div className='d-flex align-items-center justify-content-center'>
+                  Hi
+                </div>
+                </div>}
             </div>
+          
            </Card.Body>
       </Card>
     </div>
