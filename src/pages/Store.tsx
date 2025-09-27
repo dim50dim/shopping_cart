@@ -7,7 +7,7 @@ const Store = () => {
       <h1>Store</h1>
        <Row>
           {storeItems.map(item => (
-            <Col> {JSON.stringify(item)} </Col>
+            <Col> {JSON.stringify(item.name)} </Col>
           ))}
     
        </Row>
