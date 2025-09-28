@@ -8,7 +8,7 @@ type StoreItemsProps={
   imgUrl : string,
 }
 const StoreItems = ({id,name,price,imgUrl}: StoreItemsProps) => {
-  const quantity = 0
+  const quantity = 0;
   return (
     <div>
       <Card className='h-100'>
@@ -28,8 +28,15 @@ const StoreItems = ({id,name,price,imgUrl}: StoreItemsProps) => {
                  <Button className='w-100'>+ Add to Cart</Button>
               ): <div className='d-flex align-items-center flex-column' style={{gap:".5rem"}}>
                 <div className='d-flex align-items-center justify-content-center'>
-                  Hi
+                  <Button>-</Button>
+               <div>
+                   <span className='fs-4'>{quantity}</span>in cart
+               </div>
+                  <Button>+</Button>
                 </div>
+                      <Button size='sm' variant='danger'>
+                          Remove
+                      </Button>
                 </div>}
             </div>
           
